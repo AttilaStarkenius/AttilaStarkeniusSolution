@@ -11,6 +11,10 @@ namespace AttilaStarkeniusSolution
 {
     public class Program
     {
+        /*22.10.2022. The git repository for httpspandacom stopped
+        working so I created https://github.com/AttilaStarkenius/AttilaStarkeniusSolution
+        instead, and add the existing GenericsDemo project to it,
+        set it as startup project and it's working.*/
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
