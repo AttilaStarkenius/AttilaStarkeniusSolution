@@ -3,7 +3,20 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - MvcMovie</title>
+    @* 25.10.2022. I continue working with
+                                                 https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/adding-view?view=aspnetcore-6.0&tabs=visual-studio
+                                                 and change from: "<title>@ViewData["Title"] - MvcMovie</title>
+                                         <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MvcMovie</a>
+                                    &copy; 2022 - MvcMovie - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                                "to:
+                                 "    <title>@ViewData["Title"] - Movie App</title>
+                                        <a class="navbar-brand" asp-area="" asp-controller="Movies" asp-action="Index">Movie App</a>
+                            &copy; 2021 - Movie App - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        "*@
+
+    @*<title>@ViewData["Title"] - MvcMovie</title>*@
+    <title>@ViewData["Title"] - Movie App</title>
+
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
@@ -11,7 +24,9 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MvcMovie</a>
+                @*<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MvcMovie</a>*@
+                <a class="navbar-brand" asp-area="" asp-controller="Movies" asp-action="Index">Movie App</a>
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -37,7 +52,13 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2022 - MvcMovie - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            @*&copy; 2022 - MvcMovie - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>*@
+            &copy; 2021 - Movie App - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            @* 25.10.2022. I want to easily translate
+        thai letters from images in internet
+        to learn thai faster so
+        I use this website as tutorial: https://ironsoftware.com/csharp/ocr/languages/thai/
+                I create a console application called "Thai"*@
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

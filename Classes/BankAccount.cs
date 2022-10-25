@@ -264,10 +264,10 @@ Select Next.
 In the Additional information dialog, select .NET 6.0 (Long-term support).
 Select Create."
             Actually I choose .NET 3.1 because I only have Visual Studio 2019*/
-            Transaction? withdrawal = new(-amount, date, note);
-            _allTransactions.Add(withdrawal);
-            if (overdraftTransaction != null)
-                _allTransactions.Add(overdraftTransaction);
+            //Transaction? withdrawal = new(-amount, date, note);
+            //_allTransactions.Add(withdrawal);
+            //if (overdraftTransaction != null)
+            //    _allTransactions.Add(overdraftTransaction);
         }
 
         protected virtual Transaction? CheckWithdrawalLimit(bool isOverdrawn)
