@@ -6,6 +6,10 @@
 
   <ItemGroup>
     <PackageReference Include="IronOCR.Languages.Thai" Version="4.4.4.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>
