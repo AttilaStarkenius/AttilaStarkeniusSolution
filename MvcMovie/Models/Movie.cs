@@ -65,6 +65,25 @@ At line:1 char:1
         Install-Package Microsoft.EntityFrameworkCore.Design and
 Install-Package Microsoft.EntityFrameworkCore.SqlServer compatibility
         issues with .NETCoreApp,Version=v3.1"*/
+
+        /*26.10.2022. The next thing to do is find Microsoft.EntityFrameworkCore.SqlServer
+         that is compatible with .NETCoreApp,Version=v3.1
+        and find this: https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/5.0.17
+        so I install it and continue working with tutorial
+        https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/adding-model?view=aspnetcore-6.0&tabs=visual-studio
+        like this: "Scaffold movie pages
+Use the scaffolding tool to produce Create, Read, Update, and Delete (CRUD) pages for the movie model.
+
+Visual Studio
+Visual Studio Code
+Visual Studio for Mac
+In Solution Explorer, right-click the Controllers folder and select Add > New Scaffolded Item.
+        but then I get error: "there was an error 
+        running the selected code generator 
+        install the package microsoft.visualstudio.web.codegeneration.design
+        like this: Install-Package Microsoft.VisualStudio.Web.CodeGeneration.Design -Version 3.1.5
+        I commit and push to Git Changes with message "26.10.2022. Install-Package Microsoft.VisualStudio.Web.CodeGeneration.Design -Version 3.1.5
+        to be able to create a new scaffolded item"*/
         public string? Genre { get; set; }
         public decimal Price { get; set; }
     }
