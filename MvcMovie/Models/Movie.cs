@@ -84,6 +84,21 @@ In Solution Explorer, right-click the Controllers folder and select Add > New Sc
         like this: Install-Package Microsoft.VisualStudio.Web.CodeGeneration.Design -Version 3.1.5
         I commit and push to Git Changes with message "26.10.2022. Install-Package Microsoft.VisualStudio.Web.CodeGeneration.Design -Version 3.1.5
         to be able to create a new scaffolded item"*/
+
+        /*27.10.2022. I continue working with 
+         https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/adding-model?view=aspnetcore-6.0&tabs=visual-studio
+        like this:
+         "In the Add Scaffold dialog, select MVC 
+         Controller with views, using Entity Framework > Add."
+        but get error error method create in type 'microsoft.entityframeworkcore.sqlserver.query.internal
+        so I try to download visual studio 2022 community to be able to use .NET 6(latest packages)
+        from the web page https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSLandingPage&cid=2030&passive=false
+        because the installation of visual studio 2022 community takes so much time
+        I do delegate tutorial at the same time: https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/using-delegates
+        like this: ""
+         */
+
+
         public string? Genre { get; set; }
         public decimal Price { get; set; }
     }
