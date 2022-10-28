@@ -30,6 +30,8 @@ In Solution Explorer, right-click Controllers > Add > Controller."*/
             CreateHostBuilder(args).Build().Run();
         }
 
+        /*28.10.2022. I do tutorial https://learn.microsoft.com/en-us/shows/csharp-fundamentals-for-absolute-beginners/understanding-your-first-c-program
+         * so I create a C# console application "HelloWorld"*/
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
