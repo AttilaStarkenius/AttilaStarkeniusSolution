@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "DebugDemo": {
+      "commandName": "Project",
+      "commandLineArgs": "Hej jag heter David"
+    }
+  }
+}
