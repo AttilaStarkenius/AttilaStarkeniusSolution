@@ -37,7 +37,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonalRegister", "Persona
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeList", "EmployeeList\EmployeeList.csproj", "{D6E1BEC2-1B71-4B2C-9E87-BF6EBE16D903}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DebugDemo", "DebugDemo\DebugDemo.csproj", "{29ADD686-92A4-4DBD-9684-43263FA38788}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DebugDemo", "DebugDemo\DebugDemo.csproj", "{29ADD686-92A4-4DBD-9684-43263FA38788}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlowControl", "FlowControl\FlowControl.csproj", "{3A69DA2B-C71D-48BC-84C9-045D75E48EBD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -117,6 +119,10 @@ Global
 		{29ADD686-92A4-4DBD-9684-43263FA38788}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29ADD686-92A4-4DBD-9684-43263FA38788}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29ADD686-92A4-4DBD-9684-43263FA38788}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A69DA2B-C71D-48BC-84C9-045D75E48EBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A69DA2B-C71D-48BC-84C9-045D75E48EBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A69DA2B-C71D-48BC-84C9-045D75E48EBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A69DA2B-C71D-48BC-84C9-045D75E48EBD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
