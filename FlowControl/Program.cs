@@ -22,9 +22,10 @@ namespace FlowControl
             bool continueProgram = true;
             while (continueProgram)
             {
-                Console.Clear();
+                //Console.Clear();
                 Console.WriteLine("Welcome to main menu," +
-                    "please choose an option by writing a number:");
+                    "please choose an option by writing a number between 1 and 4" +
+                    " and then pushing Enter button");
                 Console.WriteLine("Choose an option:");
                 Console.WriteLine("1) Buy adolescent or pensioner movie ticket");
                 Console.WriteLine("2) Buy group movie ticket");
@@ -43,107 +44,31 @@ namespace FlowControl
                         break;
 
                     case "1":
-                        /* check the boolean condition */
-                        Console.WriteLine("Please write your age in numbers: ");
-                        int intTemp = Convert.ToInt32(Console.ReadLine());
-
-                        if (intTemp < 20)
-                        {
-                            Console.WriteLine("Adolescent price: 80 Swedish kronas");
-
-                            ///* if condition is true then check the following */
-                            //if (b == 200)
-                            //{
-                            //    /* if condition is true then print the following */
-                            //    Console.WriteLine("Value of a is 100 and b is 200");
-                            //}
-                        }
-                        else if (intTemp > 64)
-                        {
-                            Console.WriteLine("Pensioner price: 90 Swedish kronas");
-
-                        }
-                        else
-                        {
-                            Console.WriteLine("Standard price: 120 Swedish kronas");
-                        }
+                        AdolescentOrPensionerTicket();                        
                         break;
 
                     case "2":
-                        Console.WriteLine("For how many persons do you want to buy a movie ticket?");
-                        int intTemp2 = Convert.ToInt32(Console.ReadLine());
-                        int i = 0;
-                        int age = 0;
-                        int totalsum = 0;
-
-                        while (i < intTemp2)
-                        {
-                            Console.WriteLine("Please write your ages in numbers: ");
-                            age = Convert.ToInt32(Console.ReadLine());
-                            //int totalsum = 0;
-                            if (age < 20)
-                            {
-                                totalsum += 80;
-
-                                ///* if condition is true then check the following */
-                                //if (b == 200)
-                                //{
-                                //    /* if condition is true then print the following */
-                                //    Console.WriteLine("Value of a is 100 and b is 200");
-                                //}
-                            }
-                            else if (age > 64)
-                            {
-
-                                totalsum += 90;
-
-                            }
-                            else
-                            {
-
-                                totalsum += 120;
-                            }
-                        }
-
-                        Console.WriteLine("Number of people buying the movie ticket: "
-                            + intTemp2);
-
-                        Console.WriteLine("Total price for all the people buying the movie ticket: "
-                            + totalsum);
-
-                        //Console.WriteLine("Please write your ages in numbers: ");
-
+                        GroupTicket();
                         break;
 
                     case "3":
-                        //Console.WriteLine("Write at least 3 words, each words separated by a space");
-                        Console.WriteLine("Write a word to repeat 10 times");
-                        string stringTemp = (Console.ReadLine());
-
-                        //string[] words = stringTemp.Split(' ');
-
-                        //int i2 = 0;
-                        for (int i2 = 0; i2 < 10; i2++)
-                        {
-
-                            Console.Write(stringTemp);
-
-                        }
+                        InputRepeat();
+                       
                         break;
 
                     case "4":
-                        Console.WriteLine("Write at least 3 words, each words separated by a space");
-                        string stringTemp2 = (Console.ReadLine());
-
-                        string[] words = stringTemp2.Split(' ');
-                        Console.WriteLine(words[2]);
+                        ThirdWordOutput();
+                        
                         break;
 
                     default:
                         throw new ArgumentException("Only numbers are accepted for input");
                         //break;
+                        break;
                 }
             }
+
+
 
             bool notExitedProgram = true;
             while (notExitedProgram)
@@ -165,5 +90,109 @@ namespace FlowControl
             //    }
             //}
         }
+
+        private static void ThirdWordOutput()
+        {
+            Console.WriteLine("Write at least 3 words, each words separated by a space");
+            string stringTemp2 = (Console.ReadLine());
+
+            string[] words = stringTemp2.Split(' ');
+            Console.WriteLine(words[2]);
+        }
+
+        private static void InputRepeat()
+        {
+            //Console.WriteLine("Write at least 3 words, each words separated by a space");
+            Console.WriteLine("Write a word to repeat 10 times");
+            string stringTemp = (Console.ReadLine());
+
+            //string[] words = stringTemp.Split(' ');
+
+            //int i2 = 0;
+            for (int i2 = 0; i2 < 10; i2++)
+            {
+
+                Console.Write(stringTemp);
+
+            }
+        }
+
+        public static void GroupTicket()
+        {
+            Console.WriteLine("For how many persons do you want to buy a movie ticket?");
+            int intTemp2 = Convert.ToInt32(Console.ReadLine());
+            int i = 0;
+            int age = 0;
+            int totalsum = 0;
+
+            while (i < intTemp2)
+            {
+                Console.WriteLine("Please write your ages in numbers: ");
+                age = Convert.ToInt32(Console.ReadLine());
+                //int totalsum = 0;
+                if (age < 20)
+                {
+                    totalsum += 80;
+
+                    ///* if condition is true then check the following */
+                    //if (b == 200)
+                    //{
+                    //    /* if condition is true then print the following */
+                    //    Console.WriteLine("Value of a is 100 and b is 200");
+                    //}
+                    i++;
+                }
+                else if (age > 64)
+                {
+
+                    totalsum += 90;
+                    i++;
+
+                }
+                else
+                {
+
+                    totalsum += 120;
+                    i++;
+                }
+            }
+
+            Console.WriteLine("Number of people buying the movie ticket: "
+                + intTemp2);
+
+            Console.WriteLine("Total price for all the people buying the movie ticket: "
+                + totalsum);
+
+            //Console.WriteLine("Please write your ages in numbers: ");
+            //
+        }
+
+            public static void AdolescentOrPensionerTicket()
+        {
+            /* check the boolean condition */
+            Console.WriteLine("Please write your age in numbers: ");
+            int intTemp = Convert.ToInt32(Console.ReadLine());
+
+            if (intTemp < 20)
+            {
+                Console.WriteLine("Adolescent price: 80 Swedish kronas");
+
+                ///* if condition is true then check the following */
+                //if (b == 200)
+                //{
+                //    /* if condition is true then print the following */
+                //    Console.WriteLine("Value of a is 100 and b is 200");
+                //}
+            }
+            else if (intTemp > 64)
+            {
+                Console.WriteLine("Pensioner price: 90 Swedish kronas");
+
+            }
+            else
+            {
+                Console.WriteLine("Standard price: 120 Swedish kronas");
+            }
+        }
     }
-}
+    }
