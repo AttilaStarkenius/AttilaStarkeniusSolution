@@ -20,5 +20,10 @@ namespace PersonSound
 
             //throw new NotImplementedException();
         }
+
+        public override string Stats(Animal animal)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

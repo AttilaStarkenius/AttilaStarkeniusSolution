@@ -7,6 +7,65 @@ namespace PersonSound
     {
         public static void Main(string[] args)
         {
+            List<Animal> Animals = new List<Animal>();
+            Animals.Add(new Dog("Tom", 30, 10));
+            Animals.Add(new Horse("Harry", 240, 12));
+            Animals.Add(new HedgeHog("James", 1, 4));
+            //Animals.Add(new Person(31, "Andy", "Sumner", 179, 78));
+
+            foreach (var item in Animals)
+            {
+                Console.WriteLine("Name: " + item.Name + " Weight: " +
+                    item.Weight + " Age: " + item.Age);
+                Wolf wolf = new Wolf("Wolf", 100, 10);
+                wolf.DoSound();
+
+                if (item is IPerson myObj)
+                {
+                    Person person = new Person(31, "Andy", "Sumner", 179, 78);
+                    person.Talk();
+                }
+
+                //if (typeof(IPerson).IsAssignableFrom(item.GetType()))
+                //{
+                //}                //Animal.DoSound();
+            }
+
+            List<Dog> dogs = new List<Dog>();
+            //I cannot add a horse
+            //to a list of dogs called "dogs": dogs.Add(new Horse("Gerarld", 350, 14));
+            //cannot convert type Horse to type Dog - they are different
+            //types, even though both inherit the Animal.cs class.
+            //The list has to be of type "Animal" to be able to include
+            //different animals in a same list.
+
+            foreach (var item in Animals)
+            {
+                //Wolf wolf = new Wolf("Wolf", 100, 10);
+                //wolf.Stats(wolf);
+                //11.10.2022. To access Stats() Method, I need instance
+                //of animal and then call Stats through it  item.Stats(wolf);
+
+                item.Stats(item);
+
+                //11.10.2022. The class "Animal" does not
+                //contain method "returnSomeString" so I can't access
+                //Dog class' method "returnSomeString" because
+                //this is list of Animals, not Dogs especially.
+                //Only Animals' class methods are accessible
+                //for a list of Animals so I can't do this: "item.returnSomeString();"
+
+                //11.10.2022. So I try to access Dog method returnSomeString like this:
+                //((Dog)Animals[0]).returnSomeString();
+                ((Dog)Animals[0]).returnSomeString(); /*= "Boeing";*/
+
+            }
+
+            foreach (var item in dogs)
+            {
+                item.Stats(item);
+            }
+
             /*8.11.2022. I create an instance of Person class
                          Person person = new Person();
             I can access the properties of class Person.cs

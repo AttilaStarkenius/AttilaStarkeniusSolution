@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PersonSound
 {
-    public class Person
+    public class Person: IPerson
     {
         /*8.11.2022. I create a class called "Person" 
          with private fields: age, fName, lName, height, weight*/
@@ -45,6 +45,12 @@ namespace PersonSound
         public string LName { get; set; }   
         public double Height { get; set; }
         public double Weight { get; set; }
+
+        public void Talk()
+        {
+            Console.WriteLine("A person says Hi!");
+            //throw new NotImplementedException();
+        }
 
         //public List<Person> PersonList = new List<Person>();
 
