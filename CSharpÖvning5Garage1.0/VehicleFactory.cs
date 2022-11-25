@@ -14,6 +14,11 @@ namespace CSharpÖvning5Garage1._0
         public enum eVehicleType
         {
             Truck = 1,
+            Airplane,
+            Motorcycle,
+            Car,
+            Bus,
+            Boat,
             FuelCar,
             FuelMotorcycle,
             ElectricCar,
