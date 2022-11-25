@@ -326,6 +326,26 @@ namespace CSharpÖvning5Garage1._0
 
             PrintMessage(message);
         }
+
+        string IUI.getStringInput(string i_Message)
+        {
+            throw new NotImplementedException();
+        }
+
+        T IUI.printOptionsAndGetChoice<T>(string[] i_OptionsArray, string i_Message)
+        {
+            throw new NotImplementedException();
+        }
+
+        T IUI.getChoiceValue<T>(string i_Choice)
+        {
+            throw new NotImplementedException();
+        }
+
+        string IUI.fixEnumString(string i_EnumString)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 

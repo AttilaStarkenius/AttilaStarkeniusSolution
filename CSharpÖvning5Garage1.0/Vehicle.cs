@@ -13,7 +13,8 @@ namespace CSharpÖvning5Garage1._0
      they have some common properties*/
     public abstract class Vehicle : IVehicle
     {
-        private readonly string r_LicenseNumber;
+        //private readonly string r_LicenseNumber;
+        private readonly string r_LicenseNumber = Guid.NewGuid().ToString();
         private readonly List<Wheel> r_WheelsList;
         private string m_ModelName;
         private float m_CurrentEnergyPercent;
@@ -51,11 +52,16 @@ namespace CSharpÖvning5Garage1._0
             get { return r_WheelsList; }
         }
 
-        string IVehicle.r_LicenseNumber { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        List<Wheel> IVehicle.r_WheelsList { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        string IVehicle.m_ModelName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        float IVehicle.m_CurrentEnergyPercent { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        EnergySource IVehicle.m_Engine { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        string IVehicle.LicenseNumber { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        string IVehicle.CurrentEnergyPercent { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        EnergySource IVehicle.Engine { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        List<Wheel> IVehicle.WheelsList { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        //string IVehicle.r_LicenseNumber { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        //List<Wheel> IVehicle.r_WheelsList { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        //string IVehicle.m_ModelName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        //float IVehicle.m_CurrentEnergyPercent { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        //EnergySource IVehicle.m_Engine { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         //public int Year { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         //public string Make { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }

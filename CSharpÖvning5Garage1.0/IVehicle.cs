@@ -9,11 +9,16 @@ namespace CSharpÖvning5Garage1._0
 {
     public interface IVehicle
     {
-        public string r_LicenseNumber { get; set; }
-        public List<Wheel> r_WheelsList { get; set; }
-        public string m_ModelName { get; set; }
-        public float m_CurrentEnergyPercent { get; set; }
-        public EnergySource m_Engine { get; set; }
+        //public readonly string r_LicenseNumber;
+        //public readonly List<Wheel> r_WheelsList;
+        //public string m_ModelName;
+        //public float m_CurrentEnergyPercent;
+        //public EnergySource m_Engine;
+        public string LicenseNumber { get; set; }
+        public string Model { get; set; }
+        public string CurrentEnergyPercent { get; set; }
+        public EnergySource Engine { get; set; }
+        public List<Wheel> WheelsList { get; set; }
         //int Year { get; set; }
 
         //string Make { get; set; }
