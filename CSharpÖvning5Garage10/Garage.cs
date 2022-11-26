@@ -1,23 +1,28 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static CSharpÖvning5Garage1._0.VehicleFactory;
 
 namespace CSharpÖvning5Garage1._0
 {
-    public class Garage
+    public class Garage<T> : IEnumerable where T : Vehicle
     {
         /*23.11.2022. Dictionary field
          to store information about vehicle
         type and owner details of all vehicles in garage: 
                 private readonly Dictionary<Vehicle, OwnerDetails> r_VehiclesInGarage;
 */
+        private Array vehicleArray = new Array[0];
+        public static string i_LicenseNumber;
         private readonly Dictionary<Vehicle, OwnerDetails> r_VehiclesInGarage;
 
-        public Garage()
+        public Garage(int freeParkingslots = 200)
         {
             r_VehiclesInGarage = new Dictionary<Vehicle, OwnerDetails>();
+            //vehicleArray = vehicleArray;
         }
 
         /*23.11.2022. Search vehicle 
@@ -45,15 +50,44 @@ namespace CSharpÖvning5Garage1._0
         }
 
         */
-        public Vehicle this[string i_LicenseNumber]
+        public Vehicle this[string i_LicenseNumber, string numberOfWheels, 
+            string vehicleColors, string vehicleType]
         {
             get
             {
                 Vehicle resVehicle = null;
+                Vehicle numberOfTheWheels = null;
+                Vehicle vehiclesColors = null;
+                Vehicle vehicleTypes = null;
+
 
                 foreach (Vehicle vehiclePtr in r_VehiclesInGarage.Keys)
                 {
-                    if (vehiclePtr.LicenseNumber == i_LicenseNumber)
+                    if (Enum.GetNames(typeof(eVehicleType)).ToString() == vehicleType)/*Garage<T>.i_LicenseNumber.Compare(vehiclePtr.LicenseNumber, i_LicenseNumber, true))*/
+                    {
+                        vehicleTypes = vehiclePtr/*.ToString()*/;
+                    }
+                }
+
+                foreach (Vehicle vehiclePtr in r_VehiclesInGarage.Keys)
+                {
+                    if (vehiclePtr.VehicleColor.ToString() == vehicleColors)/*Garage<T>.i_LicenseNumber.Compare(vehiclePtr.LicenseNumber, i_LicenseNumber, true))*/
+                    {
+                        vehiclesColors = vehiclePtr/*.VehicleColor.ToString()*/;
+                    }
+                }
+
+                foreach (Vehicle vehiclePtr in r_VehiclesInGarage.Keys)
+                {
+                    if (vehiclePtr.WheelsList.ToString() == numberOfWheels)/*Garage<T>.i_LicenseNumber.Compare(vehiclePtr.LicenseNumber, i_LicenseNumber, true))*/
+                    {
+                        numberOfTheWheels = vehiclePtr;
+                    }
+                }
+
+                foreach (Vehicle vehiclePtr in r_VehiclesInGarage.Keys)
+                {
+                    if (vehiclePtr.LicenseNumber == i_LicenseNumber)/*Garage<T>.i_LicenseNumber.Compare(vehiclePtr.LicenseNumber, i_LicenseNumber, true))*/
                     {
                         resVehicle = vehiclePtr;
                     }
@@ -75,14 +109,15 @@ namespace CSharpÖvning5Garage1._0
             r_VehiclesInGarage.Add(i_Vehicle, ownerDetails);
         }
 
-        public bool IsInGarage(string i_LicenseNumber)
+        public bool IsInGarage(string i_LicenseNumber, string numberOfWheels,
+            string vehicleColors, string vehicleType)
         {
             bool isInGarage = true;
             Vehicle vehicle;
 
             try
             {
-                vehicle = this[i_LicenseNumber];
+                vehicle = this[i_LicenseNumber, numberOfWheels, vehicleColors, vehicleType];
             }
             catch
             {
@@ -107,24 +142,27 @@ namespace CSharpÖvning5Garage1._0
             return licensesList;
         }
 
-        public void ChangeStatus(string i_LicenseNumber, OwnerDetails.eVehicleStatus i_NewStatus)
+        public void ChangeStatus(string i_LicenseNumber, OwnerDetails.eVehicleStatus i_NewStatus, string numberOfWheels,
+            string vehicleColors, string vehicleType)
         {
-            r_VehiclesInGarage[this[i_LicenseNumber]].VehicleStatus = i_NewStatus;
+            r_VehiclesInGarage[this[i_LicenseNumber, numberOfWheels, vehicleColors, vehicleType]].VehicleStatus = i_NewStatus;
         }
 
-        public void InflatingWheelsToMaxByLicense(string i_LicenseNumber)
+        public void InflatingWheelsToMaxByLicense(string i_LicenseNumber, string numberOfWheels,
+            string vehicleColors, string vehicleType)
         {
-            this[i_LicenseNumber].InflatingWheelsToMax();
+            this[i_LicenseNumber, numberOfWheels, vehicleColors, vehicleType].InflatingWheelsToMax();
         }
 
-        public void RefuelVehicleByLicense(string i_LicenseNumber, Fuel.eFuelType i_FuelType, float i_FuelToAdd)
+        public void RefuelVehicleByLicense(string i_LicenseNumber, Fuel.eFuelType i_FuelType, float i_FuelToAdd, string numberOfWheels,
+            string vehicleColors, string vehicleType)
         {
-            Fuel fuelEngine = this[i_LicenseNumber].Engine as Fuel;
+            Fuel fuelEngine = this[i_LicenseNumber, numberOfWheels, vehicleColors, vehicleType].Engine as Fuel;
 
             if (fuelEngine != null)
             {
                 fuelEngine.Refuel(i_FuelToAdd, i_FuelType);
-                this[i_LicenseNumber].UpdateEnergyPercent();
+                this[i_LicenseNumber, numberOfWheels, vehicleColors, vehicleType].UpdateEnergyPercent();
             }
             else
             {
@@ -132,14 +170,15 @@ namespace CSharpÖvning5Garage1._0
             }
         }
 
-        public void ChargeBatteryByLicense(string i_LicenseNumber, float i_BatteryTimeToAdd)
+        public void ChargeBatteryByLicense(string i_LicenseNumber, float i_BatteryTimeToAdd, string numberOfWheels,
+            string vehicleColors, string vehicleType)
         {
-            Electric electricEngine = this[i_LicenseNumber].Engine as Electric;
+            Electric electricEngine = this[i_LicenseNumber, numberOfWheels, vehicleColors, vehicleType].Engine as Electric;
 
             if (electricEngine != null)
             {
                 electricEngine.ChargeBattery(i_BatteryTimeToAdd);
-                this[i_LicenseNumber].UpdateEnergyPercent();
+                this[i_LicenseNumber, numberOfWheels, vehicleColors, vehicleType].UpdateEnergyPercent();
             }
             else
             {
@@ -147,10 +186,11 @@ namespace CSharpÖvning5Garage1._0
             }
         }
 
-        public string GetVehicleDetails(string i_LicenseNumber)
+        public string GetVehicleDetails(string i_LicenseNumber, string numberOfWheels,
+            string vehicleColors, string vehicleType)
         {
             string vehicleDetails, wheelsDetails, engineDetails, vehicleSpecificDetails;
-            Vehicle vehicle = this[i_LicenseNumber];
+            Vehicle vehicle = this[i_LicenseNumber, numberOfWheels, vehicleColors, vehicleType];
             OwnerDetails ownerDetails = r_VehiclesInGarage[vehicle];
 
             wheelsDetails = vehicle.GetWheelsDetails();
@@ -193,6 +233,11 @@ vehicleSpecificDetails);
             }
 
             return energyType;
+        }
+
+        public IEnumerator GetEnumerator()
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -19,6 +19,8 @@ namespace CSharpÖvning5Garage1._0
         public string CurrentEnergyPercent { get; set; }
         public EnergySource Engine { get; set; }
         public List<Wheel> WheelsList { get; set; }
+
+        public string vehicleColor { get; set; }
         //int Year { get; set; }
 
         //string Make { get; set; }

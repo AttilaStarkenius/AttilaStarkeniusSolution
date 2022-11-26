@@ -32,7 +32,7 @@ namespace CSharpÖvning5Garage1._0
         {
         }
 
-        public override void CreateEngineAndWheels(EnergySource.eEnergyType i_EnergySource)
+        public void CreateEngineAndWheels(EnergySource.eEnergyType i_EnergySource)
         {
             AllocateEngine(i_EnergySource);
             InitializeWheels(k_MaxAirPressure);
@@ -47,19 +47,19 @@ namespace CSharpÖvning5Garage1._0
             }
         }
 
-        public override void FillDetails(SpecificDetailsForm i_DetailsForm)
+        public void FillDetails(SpecificDetailsForm i_DetailsForm)
         {
             m_LicenseType = i_DetailsForm.LicenseType;
             m_EngineCapacity = i_DetailsForm.EngineCapacity;
             UpdateEnergyPercent();
         }
 
-        public override string GetSpecificDetails()
+        public string GetSpecificDetails()
         {
             return string.Format("The license type: {0}, The engine capacity: {1}", m_LicenseType.ToString(), m_EngineCapacity);
         }
 
-        public override void UpdateEnergyPercent()
+        public void UpdateEnergyPercent()
         {
             UpdateCurrentEnergyPercent(k_MaxFuelAmount, k_MaxBatteryTime);
         }

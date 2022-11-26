@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static CSharpÖvning5Garage1._0.Car;
 
 namespace CSharpÖvning5Garage1._0
 {
@@ -11,7 +12,7 @@ namespace CSharpÖvning5Garage1._0
      * functionality among all the implementations 
      * of the vehicle, vehicle types being many but
      they have some common properties*/
-    public abstract class Vehicle : IVehicle
+    public /*abstract */class Vehicle : IVehicle
     {
         //private readonly string r_LicenseNumber;
         private readonly string r_LicenseNumber = Guid.NewGuid().ToString();
@@ -19,6 +20,7 @@ namespace CSharpÖvning5Garage1._0
         private string m_ModelName;
         private float m_CurrentEnergyPercent;
         private EnergySource m_Engine;
+        public string vehicleColor = Enum.GetNames(typeof(eCarColor)).ToString();
 
         public Vehicle(string i_LicenseNumber, int i_NumberOfWheels)
         {
@@ -26,10 +28,15 @@ namespace CSharpÖvning5Garage1._0
             r_WheelsList = new List<Wheel>(i_NumberOfWheels);
         }
 
-        public string LicenseNumber
+        public string VehicleColor
         {
-            get { return r_LicenseNumber; }
+            get { return vehicleColor; }
         }
+
+        //public string LicenseNumber
+        //{
+        //    get { return r_LicenseNumber; }
+        //}
 
         public string Model
         {
@@ -56,6 +63,7 @@ namespace CSharpÖvning5Garage1._0
         string IVehicle.CurrentEnergyPercent { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         EnergySource IVehicle.Engine { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         List<Wheel> IVehicle.WheelsList { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string vehicleColor { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         //string IVehicle.r_LicenseNumber { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         //List<Wheel> IVehicle.r_WheelsList { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
@@ -165,13 +173,22 @@ wheel.CurrentAirPressure.ToString());
             }
         }
 
-        public abstract void CreateEngineAndWheels(EnergySource.eEnergyType i_EnergySource);
+        public void CreateEngineAndWheels(EnergySource.eEnergyType i_EnergySource)
+        {
 
-        public abstract string GetSpecificDetails();
+        }
 
-        public abstract void UpdateEnergyPercent();
+        public string GetSpecificDetails() {
+            String specificDetail = "Specific";
+            return specificDetail;
+        }
 
-        public abstract void FillDetails(SpecificDetailsForm i_DetailsForm);
+        public void UpdateEnergyPercent()
+        {
+
+        }
+
+        public void FillDetails(SpecificDetailsForm i_DetailsForm) { }
 
         public void StartVehicle(IVehicle vehicle)
         {

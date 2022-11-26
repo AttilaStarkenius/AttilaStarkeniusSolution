@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static CSharpÖvning5Garage1._0.Car;
 
-namespace CSharpÖvning5Garage1._0
+namespace CSharpÖvning5Garage10
 {
     public class Airplane : Vehicle
     {
@@ -29,6 +29,14 @@ namespace CSharpÖvning5Garage1._0
             Twohundred,
         }
 
+        private const int k_NumberOfWheels = 4;
+        private const float k_MinimumRange = 0;
+        private const float k_MaxAirPressure = 32f;
+        private const float k_MaxBatteryTime = 3.2f;
+        private const float k_MaxFuelAmount = 45f;
+        private eAirplaneColor m_eAirplaneColor;
+        private eNumberOfDoors m_NumberOfDoors;
+
         public static string[] GetColors()
         {
             return Enum.GetNames(typeof(eAirplaneColor));
@@ -38,24 +46,24 @@ namespace CSharpÖvning5Garage1._0
         {
             return Enum.GetNames(typeof(eAirplaneNumberOfSeats));
         }
-        public override void CreateEngineAndWheels(EnergySource.eEnergyType i_EnergySource)
+        public void CreateEngineAndWheels(EnergySource.eEnergyType i_EnergySource)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
-        public override void FillDetails(SpecificDetailsForm i_DetailsForm)
+        public void FillDetails(SpecificDetailsForm i_DetailsForm)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
-        public override string GetSpecificDetails()
+        public string GetSpecificDetails()
         {
-            throw new NotImplementedException();
+            return string.Format("The car's color: {0}, The number of doors: {1}", m_eAirplaneColor.ToString(), m_NumberOfDoors.ToString());
         }
 
-        public override void UpdateEnergyPercent()
+        public void UpdateEnergyPercent()
         {
-            throw new NotImplementedException();
+            UpdateCurrentEnergyPercent(k_MaxFuelAmount, k_MaxBatteryTime);
         }
     }
 }

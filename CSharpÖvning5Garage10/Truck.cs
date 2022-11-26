@@ -19,7 +19,7 @@ namespace CSharpÖvning5Garage1._0
         {
         }
 
-        public override void CreateEngineAndWheels(EnergySource.eEnergyType i_EnergySource)
+        public void CreateEngineAndWheels(EnergySource.eEnergyType i_EnergySource)
         {
             AllocateEngine(i_EnergySource);
             InitializeWheels(k_MaxAirPressure);
@@ -27,14 +27,14 @@ namespace CSharpÖvning5Garage1._0
             ((Fuel)Engine).FuelType = Fuel.eFuelType.Soler;
         }
 
-        public override void FillDetails(SpecificDetailsForm i_DetailsForm)
+        public void FillDetails(SpecificDetailsForm i_DetailsForm)
         {
             m_IsCooledBaggage = i_DetailsForm.IsCooledBaggage;
             m_BaggageCapacity = i_DetailsForm.BaggageCapacity;
             UpdateEnergyPercent();
         }
 
-        public override string GetSpecificDetails()
+        public string GetSpecificDetails()
         {
             string isCoolBaggage = m_IsCooledBaggage == true ? string.Empty : "NOT ";
             string message = string.Format(
@@ -46,7 +46,7 @@ isCoolBaggage);
             return message;
         }
 
-        public override void UpdateEnergyPercent()
+        public void UpdateEnergyPercent()
         {
             UpdateCurrentEnergyPercent(k_MaxFuelAmount, k_NoneBattery);
         }

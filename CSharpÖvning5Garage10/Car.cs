@@ -47,7 +47,7 @@ namespace CSharpÖvning5Garage1._0
         {
         }
 
-        public override void CreateEngineAndWheels(EnergySource.eEnergyType i_EnergySource)
+        public void CreateEngineAndWheels(EnergySource.eEnergyType i_EnergySource)
         {
             AllocateEngine(i_EnergySource);
             InitializeWheels(k_MaxAirPressure);
@@ -62,7 +62,7 @@ namespace CSharpÖvning5Garage1._0
             }
         }
 
-        public override void FillDetails(SpecificDetailsForm i_DetailsForm)
+        public void FillDetails(SpecificDetailsForm i_DetailsForm)
         {
             m_CarColor = i_DetailsForm.CarColor;
             m_NumberOfDoors = i_DetailsForm.NumberOfDoors;
@@ -70,12 +70,12 @@ namespace CSharpÖvning5Garage1._0
         }
 
         // $G$ DSN-999 (-3) You should have implemented this by overriding ToString 
-        public override string GetSpecificDetails()
+        public string GetSpecificDetails()
         {
             return string.Format("The car's color: {0}, The number of doors: {1}", m_CarColor.ToString(), m_NumberOfDoors.ToString());
         }
 
-        public override void UpdateEnergyPercent()
+        public void UpdateEnergyPercent()
         {
             UpdateCurrentEnergyPercent(k_MaxFuelAmount, k_MaxBatteryTime);
         }

@@ -3,9 +3,13 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
-    <RootNamespace>CSharpÖvning5Garage1._0</RootNamespace>
+    <RootNamespace>CSharpÖvning5Garage10</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CSharpÖvning5Garage1.0Test\CSharpÖvning5Garage1.0Test.csproj" />
+  </ItemGroup>
 
 </Project>
