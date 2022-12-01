@@ -2,11 +2,11 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("CSharpÖvning5Garage1.0Test")]
+[assembly: AssemblyTitle("CSharpÖvning5Garage10Test")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CSharpÖvning5Garage1.0Test")]
+[assembly: AssemblyProduct("CSharpÖvning5Garage10Test")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

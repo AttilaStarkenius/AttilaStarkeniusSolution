@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{890309A2-2284-48F6-8384-655248284828}</ProjectGuid>
+    <ProjectGuid>{BEB07740-C299-41CA-8570-C9B4200461A1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CSharpÖvning5Garage1._0Test</RootNamespace>
-    <AssemblyName>CSharpÖvning5Garage1.0Test</AssemblyName>
+    <RootNamespace>CSharpÖvning5Garage10Test</RootNamespace>
+    <AssemblyName>CSharpÖvning5Garage10Test</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -54,6 +54,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CSharpÖvning5Garage10\CSharpÖvning5Garage10.csproj">
+      <Project>{a53bf87a-6aa4-405d-96be-1aa9f154f4e7}</Project>
+      <Name>CSharpÖvning5Garage10</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

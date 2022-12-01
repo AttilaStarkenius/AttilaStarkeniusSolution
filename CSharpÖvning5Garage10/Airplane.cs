@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static CSharpÖvning5Garage1._0.Car;
+using static CSharpÖvning5Garage10.Car;
 
 namespace CSharpÖvning5Garage10
 {

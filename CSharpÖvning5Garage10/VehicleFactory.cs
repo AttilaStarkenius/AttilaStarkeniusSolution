@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpÖvning5Garage1._0
+namespace CSharpÖvning5Garage10
 {
     /*24.11.2022. I create class "VehicleFactory"
      to create a vehicle and to get vehicle options*/

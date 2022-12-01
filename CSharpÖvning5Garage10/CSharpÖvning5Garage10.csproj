@@ -8,8 +8,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\CSharpÖvning5Garage1.0Test\CSharpÖvning5Garage1.0Test.csproj" />
-  </ItemGroup>
-
 </Project>

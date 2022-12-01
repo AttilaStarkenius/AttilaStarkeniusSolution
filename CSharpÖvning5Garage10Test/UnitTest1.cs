@@ -1,9 +1,11 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using CSharpÖvning5Garage1;
-using static CSharpÖvning5Garage1._0.VehicleFactory;
+using CSharpÖvning5Garage10;
+using static CSharpÖvning5Garage10.VehicleFactory;
+using CSharpÖvning5Garage10Test;
+using CSharpÖvning5Garage10Test;
 
-namespace CSharpÖvning5Garage1._0Test
+namespace CSharpÖvning5Garage10Test
 {
     [TestClass]
     public class UnitTest1

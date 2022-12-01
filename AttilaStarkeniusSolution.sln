@@ -49,6 +49,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpÖvning5Garage1.0Test
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpÖvning5Garage10", "CSharpÖvning5Garage10\CSharpÖvning5Garage10.csproj", "{A53BF87A-6AA4-405D-96BE-1AA9F154F4E7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpÖvning5Garage10Test", "CSharpÖvning5Garage10Test\CSharpÖvning5Garage10Test.csproj", "{BEB07740-C299-41CA-8570-C9B4200461A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -147,6 +149,10 @@ Global
 		{A53BF87A-6AA4-405D-96BE-1AA9F154F4E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A53BF87A-6AA4-405D-96BE-1AA9F154F4E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A53BF87A-6AA4-405D-96BE-1AA9F154F4E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEB07740-C299-41CA-8570-C9B4200461A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEB07740-C299-41CA-8570-C9B4200461A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEB07740-C299-41CA-8570-C9B4200461A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEB07740-C299-41CA-8570-C9B4200461A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

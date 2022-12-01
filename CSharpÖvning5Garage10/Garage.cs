@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static CSharpÖvning5Garage1._0.VehicleFactory;
+using static CSharpÖvning5Garage10.VehicleFactory;
 
-namespace CSharpÖvning5Garage1._0
+namespace CSharpÖvning5Garage10
 {
     public class Garage<T> : IEnumerable where T : Vehicle
     {

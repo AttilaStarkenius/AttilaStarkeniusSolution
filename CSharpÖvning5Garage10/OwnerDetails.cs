@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpÖvning5Garage1._0
+namespace CSharpÖvning5Garage10
 {
     /*24.11.2022. I create class OwnerDetails
      to store vehicle owner details*/

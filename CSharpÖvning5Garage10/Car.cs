@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpÖvning5Garage1._0
+namespace CSharpÖvning5Garage10
 {
     /*23.11.2022. I create a sub class "Car" to super class "Vehicle"*/
     public class Car : Vehicle

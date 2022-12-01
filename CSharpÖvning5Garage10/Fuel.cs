@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpÖvning5Garage1._0
+namespace CSharpÖvning5Garage10
 {
     public class Fuel : EnergySource
     {

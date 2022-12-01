@@ -1,4 +1,4 @@
-﻿namespace CSharpÖvning5Garage1._0
+﻿namespace CSharpÖvning5Garage10
 {
     public class Program
     {
